@@ -11,8 +11,8 @@
 </head>
 
 <body>
-    <div id="quoteContainer" class="flex w-full min-h-screen justify-center items-center">
-        <div class=" flex w-full max-w-4xl p-8 rounded-xl shadow-2xl">
+    <div class="flex w-full min-h-screen justify-center items-center">
+        <div id="quoteContainer" class=" flex w-full max-w-4xl p-8 rounded-xl shadow-2xl">
             <div class="container text-center mx-auto rounded-lg">
                 <p class="text-[60px] font-bold" id="quote"></p>
                 <p class="text-xl font-serif" id="author"></p>
@@ -27,14 +27,15 @@
                         id="new">New
                         Quote</button>
                 </div>
-                <div id="loader" class="flex items-center justify-center">
-                    <div class="spinner-border animate-spin inline-block w-8 h-8 border-4 rounded-full" role="status">
-                        <span class="visually-hidden">Loading...</span>
-                    </div>
-                </div>
+            </div>
+        </div>
+        <div id="loader" class="flex items-center justify-center">
+            <div class="spinner-border animate-spin inline-block w-8 h-8 border-4 rounded-full" role="status">
+                <span class="visually-hidden">Loading...</span>
             </div>
         </div>
     </div>
     <script src="script.js"></script>
 </body>
+
 </html>
