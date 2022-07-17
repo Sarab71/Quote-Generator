@@ -16,17 +16,13 @@ const complete = () => {
 }
  getQuote = async () => {
     loading();
+    const proxyUrl = 'https://whispering-tor-04671.herokuapp.com/'
     const apiUrl = 'http://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=json';
     try {
-        const response = await fetch(apiUrl);
+        const response = await fetch(proxyUrl + apiUrl);
         const data = await response.json();
-        if (data.quoteAuthor === '') {
-            authorText.innerText = 'Unknown';
-        } else {
-            authorText.innerText = data.quoteAuthor;
-        }
+        (data.quoteAuthor === '' ?  authorText.innerText = 'Unknown' :  authorText.innerText = data.quoteAuthor )
         quoteText.innerText = data.quoteText;
-
         complete();
     } catch (error) {
         getQuote();
